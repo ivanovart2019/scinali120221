@@ -1,0 +1,18 @@
+.questions {
+  &-block {
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+  }
+  &__title {
+    font-size: 30px;
+    @include bold;
+  }
+  &__link {
+    font-size: 21px;
+    color: $primary;
+    opacity: 0.7;
+  }
+}

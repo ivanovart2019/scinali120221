@@ -1,0 +1,169 @@
+﻿//-------------------- Кнопка вывода меню -------------
+.menu {
+  position: fixed;
+  z-index: 1;
+  top: 28px;
+  left: 0;
+  width: 100%;
+  padding: 16px 0;
+  background-color: $primary;
+  transition: 0.3s;
+  transform: translateY(100%);
+
+  &_active {
+    transform: translateY(-100%);
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    a:hover {
+      color: #a6ec36;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #ffffff;
+    @include bold;
+  }
+  /*  блок кнопки вывода меню */
+  &-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    border-right: 1px solid rgba(#510bba, 0.2); /* линия справа от гамбургера */
+    border-left: 1px solid rgba(#510bba, 0.2); /* линия слева от гамбургера */
+    height: 70px;
+    width: 70px;
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus {
+      outline: none;
+    }
+
+    /* линии гамбургера */
+
+    // &__line {
+    //   display: block;
+    //   width: 30px;
+    //   height: 5px;
+    //   background-color: #559;
+    //   margin: 3px 0;
+    // }
+
+    span {
+      /* настройка кнопки (полоски) */
+      display: block;
+      //z-index: 200;
+      transition: all 0.3s;
+      width: 30px;
+      margin-top: 6px;
+      height: 5px;
+      background-color: #559;
+    }
+  }
+}
+
+.first {
+  transform: translate(8px, 2px) rotate(45deg);
+  transform-origin: top left;
+}
+.middle {
+  transform: scale(0);
+}
+.last {
+  transform: translate(-3px, -21px) rotate(-45deg);
+  transform-origin: right bottom;
+}
+
+/* --------------------- блок navbar --------------------- */
+.navbar {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  &-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80px;
+    //border: 1px solid red;
+  }
+
+  &__mobile,
+  &__landline {
+    text-align: right;
+  }
+  &__phone {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+    @include bold;
+    text-decoration: none;
+    color: $text-color;
+  }
+  .navbar__smail_text {
+    display: block;
+    font-size: 14px;
+    color: $text-color-light;
+    text-decoration: none;
+  }
+
+  .logo {
+    &__text {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 20px;
+      text-transform: uppercase;
+      @include bold;
+    }
+    &__description {
+      display: block;
+      font-size: 14px;
+      color: $text-color-light;
+    }
+  }
+}
+
+/*----------- adaptive меню ---------------*/
+@media (max-width: 992px) {
+  .navbar {
+    &__mobile,
+    &__landline {
+      display: none;
+    }
+  }
+}
+@media (max-width: 660px) {
+  .navbar {
+    &__logo {
+      display: none;
+    }
+  }
+  .menu {
+    top: 75px;
+    transform: translateY(0);
+    &_active {
+      transform: translateY(-100%);
+    }
+    &-button {
+      height: 60px;
+    }
+    &__nav {
+      flex-direction: column;
+    }
+    &__link {
+      margin-bottom: 1em;
+    }
+  }
+}

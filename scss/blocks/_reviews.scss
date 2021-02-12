@@ -1,0 +1,54 @@
+.reviews {
+  background-color: #f5f3f5;
+  &-slider {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 140px;
+    &__item {
+      text-align: center;
+    }
+    &__image {
+      display: block;
+      width: 70px;
+      height: 70px;
+      border: 2px solid #6a996e;
+      border-radius: 50%;
+      margin: 30px auto;
+    }
+    &__text {
+      position: relative;
+      font-size: 15px;
+      font-style: italic;
+      max-width: 370px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      &:after {
+        //рисуем треугольник
+        content: "";
+        position: absolute;
+        bottom: -65px;
+        left: 45%;
+        //width: 20px;
+        height: 30px;
+        border: 20px solid transparent;
+        border-top: 20px solid #99f;
+      }
+    }
+  }
+}
+@media (max-width: 680px) {
+  .reviews {
+    &-slider {
+      display: block;
+      flex-wrap: wrap;
+      &__text {
+        margin: auto;
+      }
+      &__item {
+        display: block;
+      }
+    }
+  }
+}

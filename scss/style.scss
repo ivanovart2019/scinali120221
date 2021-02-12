@@ -1,0 +1,40 @@
+﻿@charset "UTF-8";
+
+//базовая настройка сайта
+@import "grid";
+//настройка шрифтов и цвета
+@import "fonts";
+//блок цветов
+@import "colors/colors";
+@import "slick";
+//настройки интерфейса
+@import "interface";
+//шапка сайта
+@import "blocks/navbar";
+//блок hero
+@import "blocks/hero";
+//блок формы расчетов
+@import "blocks/offer";
+//блок преимущества
+@import "blocks/feature";
+//Наш каталог
+@import "blocks/catalog";
+//блог _list
+@import "blocks/blog-list";
+//блок цены
+@import "blocks/price";
+
+//блок steps
+@import "blocks/steps";
+
+@import "blocks/before";
+//блок отзывов
+@import "blocks/reviews";
+
+@import "blocks/factory";
+
+@import "blocks/contacts";
+
+@import "blocks/questions";
+
+@import "blocks/footer";

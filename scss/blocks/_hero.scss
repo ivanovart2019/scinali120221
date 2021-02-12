@@ -1,0 +1,43 @@
+.hero {
+  display: block;
+  background: #f1f1f1 url(../img/hero2_bg.png) no-repeat center top 80px;
+  background-size: 100%;
+  //margin-top: 80px;
+  padding-top: 120px;
+  padding-bottom: 200px;
+
+  &__title {
+    display: block;
+    font-size: 1.5em;
+    margin: 40px 0 40px 0;
+  }
+  &__subtitle {
+    display: block;
+    font-size: 1.2em;
+    @include bold;
+    margin-bottom: 60px;
+  }
+}
+
+// adaptive 25.10.20 - 18:42
+// @media (max-width: 992px) {
+//   .hero {
+//     background-size: cover;
+//     background-position: top left 20%;
+//   }
+// }
+
+@media (max-width: 640px) {
+  .hero {
+    &__title {
+      font-size: 1em;
+      margin: 60px 0 40px 0;
+    }
+    &__subtitle {
+      display: block;
+      font-size: 1em;
+      @include bold;
+      margin-bottom: 42px;
+    }
+  }
+}
