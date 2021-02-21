@@ -8,7 +8,7 @@
 @import "colors/colors";
 @import "slick";
 //настройки интерфейса
-@import "interface";
+// @import "interface";
 //шапка сайта
 @import "blocks/navbar";
 //блок hero
@@ -27,7 +27,7 @@
 //блок steps
 @import "blocks/steps";
 
-@import "blocks/before";
+//@import "blocks/before";
 //блок отзывов
 @import "blocks/reviews";
 
@@ -38,3 +38,5 @@
 @import "blocks/questions";
 
 @import "blocks/footer";
+
+@import "interface";
