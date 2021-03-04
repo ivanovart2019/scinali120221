@@ -29,15 +29,18 @@
   &__copy {
     color: #888;
   }
-  &_pay-logo {
-    margin: 15px;
+  &-pay{
+      //border: 1px solid #fff;
+     &__logo { 
+       margin-top: 15px;
+     }
   }
   &-contacts {
     text-align: right;
   }
   &__phone {
     display: block;
-    //margin-bottom: 20px;
+    margin-bottom: 20px;
     font-size: 20px;
     @include bold;
   }
@@ -49,8 +52,8 @@
     margin-right: 20px;
   }
   &-social {
-    &__link {
-      margin-left: 20px;
+     &__link {
+        margin-left: 20px;
     }
   }
 }

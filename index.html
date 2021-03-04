@@ -103,6 +103,7 @@
                     <span class="offer__subtitle">
                         и получите скидку 30% на изготовление скинали или фартуха для кухни
                     </span>
+
                     <form action="" class="form offer__form">
                         <!-- .form_row>.form_group*3>label.form_label+input.input.form_input -->
                         <div class="form__row">
@@ -112,26 +113,34 @@
                                 <!-- <input type="text" class="input form__input"> -->
 
                                 <input type="hidden" name="type" id="select-type" value="С печатью">
+
                                 <div class="select form__select">
-                                    <div class="select__checked">С печатью</div>
+                                    <!-- <div class="select__checked">С печатью</div>
                                     <ul class="select__dropdown">
                                         <li class="select__option" data-value="С печатью">С печатью</li>
                                         <li class="select__option" data-value="Без печати">Без печати</li>
-                                    </ul>
-                                </div>
+                                    </ul> 
+                                </div> -->
 
+                                    <select class="select" name="sel" id="sel">
+                                        <option class="option" value="opt_1">С печатью</option>
+                                        <option class="option" value="opt_2">Без печати</option>
+                                    </select>
+
+                                </div>
                             </div>
 
                             <div class="form__group">
                                 <label for="" class="form__label">Ширина, см</label>
                                 <input type="text" class="input form__input">
                             </div>
+
                             <div class="form__group">
                                 <label for="" class="form__label">Высота, см</label>
                                 <input type="text" class="input form__input">
                             </div>
                         </div>
-
+                        <!-- Выбор сервиса -->
                         <div class="form__row form__row_checkbox">
                             <div class="form__checkbox">
 
@@ -148,13 +157,20 @@
                                 </label>
                             </div>
                         </div>
+                        <!-- Получить скидку -->
                         <div class="form__row">
                             <div class="form__group">
-                                <input type="text" class="form__input input" placeholder="Ваше имя">
+                                <label for="" class="form__label">Ваше имя</label>
+                                <input type="text" class="form__input input" placeholder="Ф И О">
                             </div>
+
                             <div class="form__group">
-                                <input type="tel" class="form__input input" placeholder="Ваш телефон">
+                                <label for="" class="form__label">Ваш номер телефона</label>
+                                <!-- <input type="tel" class="form__input input" placeholder="Ваш телефон"> -->
+                                <input type="tel" class="form__input input" id="phone" name="phone"
+                                    placeholder="+7 (999) 999 99 99">
                             </div>
+
                             <div class="form__group">
                                 <input type="submit" class="button form__button" value="Получить скидку">
                             </div>
@@ -627,15 +643,16 @@
                         <!-- .form_row>.form_group*3>label.form_label+input.input.form_input -->
                         <div class="form__row">
                             <div class="form__group">
-
                                 <input type="text" class="input form__input" placeholder="Ваше имя">
                             </div>
-                            <div class="form__group">
 
-                                <input type="text" class="input form__input" placeholder="Ваш телефон">
+                            <div class="form__group">
+                                <!-- <input type="text" class="input form__input" placeholder="Ваш телефон"> -->
+                                <input type="tel" class="input form__input" id="phone" name="phone"
+                                    placeholder="+7 (999) 999-99-99">
                             </div>
-                            <div class="form__group">
 
+                            <div class="form__group">
                                 <input type="text" class="input form__input" placeholder="Ваша цена">
                             </div>
                         </div>
@@ -740,14 +757,14 @@
                         <span class="footer__copy">&copy; Фабрика скинали №1</span>
                     </div>
 
-                    <div class="footer-pay__info">
+                    <div class="footer-pay">
                         <!-- <img src="img/social1.png" alt="1"> -->
-                        <img src="img/wm3.png" alt="1">
+                        <!-- <img src="img/wm3.png" alt="1"> -->
 
-                        <!-- <img src="img/webmoney-paying-logo.png" alt="1" clacc="footer_pay-logo">
-              <img src="img/yandex-pay-logo.png" alt="2" clacc="footer_pay-logo">
-              <img src="img/master-card-logo.png" alt="3" clacc="footer_pay-logo">
-              <img src="img/visa-pay-logo.png" alt="4" clacc="footer_pay_logo"> -->
+                        <img src="img/mastercard.png" alt="1" class="footer-pay__logo">
+                        <img src="img/paypal_5.png" alt="2" class="footer_pay-logo">
+                        <img src="img/yandex_many_1.png" alt="3" class="footer_pay__logo">
+                        <img src="img/visa_cart.png" alt="4" class="footer-pay__logo">
                     </div>
 
                     <div class="footer-contacts">
@@ -780,14 +797,23 @@
 
         <!-- подключение виджета обратной связи через spikmi (соцсети)-->
         <!-- <script type="text/javascript" src="https://spikmi.com/Widget?Id=4342"></script>   -->
-        <script src="js/jquery-2.2.4.min.js" type="text/javascript"></script>
-        <!-- <script -->
-        <!-- src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"> -->
-        <!-- <script> -->
 
+
+        <!-- <script src="js/jquery.min.js"></script> -->
+        <script src="js/jquery-2.2.4.min.js" type="text/javascript"></script>
+        <script src="js/jquery.maskedinput.min.js"></script>
         <script src="js/slick.min.js" type="text/javascript"></script>
         <script src="js/jquery.event.move.js" type="text/javascript"></script>
         <script src="js/jquery.twentytwenty.js" type="text/javascript"></script>
+
+
+
+        <script>
+            //------------ form select -------------------
+            $(document).ready(function () {
+                $("#phone").mask("+7 (999) 999-99-99");
+            });
+        </script>
 
         <script>
             //--------------- slick-slider ---------------
@@ -801,6 +827,7 @@
         </script>
 
         <script>
+            //---------- func do end posle ------------
             $(function () {
                 $(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({ default_offset_pct: 0.9 });
             });
@@ -854,8 +881,8 @@
             });
 
         </script>
-		<script src="script.js"></script>
+        <script src="script.js"></script>
 
 </body>
-</html>
 
+</html>

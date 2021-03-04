@@ -33,6 +33,7 @@
     margin-bottom: 40px;
     max-width: 800px;
   }
+  
   .form {
     &__row {
       display: flex;
@@ -48,6 +49,7 @@
       display: block;
       font-size: 16px;
       margin-bottom: 15px;
+      margin-top: 15px;
     }
     &__group {
       flex-basis: 33.33%;
@@ -63,11 +65,20 @@
     &__button {
       height: 80px;
       width: 100%;
+      margin-top: 50px;
     }
     &__policy {
       display: inline-block;
       margin-left: 30px;
+      margin-top: 50px;
       font-size: 16px;
+    }
+
+    select{
+      //weight: 300px;
+      height: 80px;
+      padding: 10px 100px 10px 25px;
+      cursor: pointer;
     }
   }
   &-price {
@@ -79,6 +90,9 @@
   .offer {
     &-block {
       background-position: center right -120px;
+    }
+    select{
+      padding: 10px 115px 10px 10px;
     }
   }
 }

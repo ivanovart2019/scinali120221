@@ -447,6 +447,7 @@
   display: block;
   font-size: 16px;
   margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .offer .form__group {
@@ -466,12 +467,20 @@
 .offer .form__button {
   height: 80px;
   width: 100%;
+  margin-top: 50px;
 }
 
 .offer .form__policy {
   display: inline-block;
   margin-left: 30px;
+  margin-top: 50px;
   font-size: 16px;
+}
+
+.offer .form select {
+  height: 80px;
+  padding: 10px 100px 10px 25px;
+  cursor: pointer;
 }
 
 .offer-price {
@@ -481,6 +490,9 @@
 @media (max-width: 1190px) {
   .offer-block {
     background-position: center right -120px;
+  }
+  .offer select {
+    padding: 10px 115px 10px 10px;
   }
 }
 
@@ -1136,8 +1148,8 @@
   color: #888;
 }
 
-.footer_pay-logo {
-  margin: 15px;
+.footer-pay__logo {
+  margin-top: 15px;
 }
 
 .footer-contacts {
@@ -1146,6 +1158,7 @@
 
 .footer__phone {
   display: block;
+  margin-bottom: 20px;
   font-size: 20px;
   font-family: "Proxima Nova Semibold", sans-serif;
 }
@@ -1306,7 +1319,6 @@ input[type="checkbox"]:checked + label:before {
   right: 20px;
   width: 20px;
   height: 20px;
-  background: url(../img/caret.png) no-repeat center;
   background-size: 100%;
 }
 
@@ -1352,6 +1364,7 @@ input[type="checkbox"]:checked + label:before {
       -ms-flex-align: center;
           align-items: center;
   margin-right: 40px;
+  margin-top: 15px;
 }
 
 .checkbox__label:hover {
@@ -1362,7 +1375,7 @@ input[type="checkbox"]:checked + label:before {
   content: "";
   width: 30px;
   height: 30px;
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   margin-right: 20px;
 }
 
@@ -1371,7 +1384,7 @@ input[type="checkbox"]:checked + label:before {
   background: transparent;
   text-align: center;
   position: fixed;
-  bottom: 20px;
+  bottom: 15px;
   right: 580px;
   cursor: pointer;
   display: none;
