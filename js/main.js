@@ -1,14 +1,26 @@
 ﻿
 //------------- настройка выбора select --------------------
 $('.select__checked').on('click', function () {
- $('.select__dropdown').toggleClass('.select__dropdown_open');
+ $('.select__dropdown').toggleClass('select__dropdown_open');
 });
 $('.select__option').on('click', function () {
  var value = $(this).attr('data-value');
  $('#select-type').val(value);
- $('select__checked').text(value);
- $('.select__dropdown').toggleClass('.select__dropdown_open');
+ $('.select__checked').text(value);
+ $('.select__dropdown').toggleClass('select__dropdown_open');
 });
+$("a[href^='#']").click(function () {
+ var _href = $(this).attr("href");
+ $("html,body").animate({ scrollTop: $(_href).offset().top - 120 + "px" });
+});
+
+//------------ form select phone -------------------
+$(document).on('ready', function () {
+ //$("#phone").mask("+7 (999) 999-99-99");
+ $('input[type="tel"]').mask("+7 (999) 999-99-99");
+});
+
+
 
 
 //-------------------- Показать/Скрыть верхнее меню ---------
@@ -38,10 +50,7 @@ $(document).on('ready', function () {
  });
 });
 
-//------------ form select phone -------------------
-$(document).on('ready', function () {
- $("#phone").mask("+7 (999) 999-99-99");
-});
+
 
 //================================ func do end posle =================================
 $(function () {
