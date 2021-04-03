@@ -59,10 +59,9 @@
     //   margin: 3px 0;
     // }
 
-    span {
+    &__line {
       /* настройка кнопки (полоски) */
       display: block;
-      //z-index: 200;
       transition: all 0.3s;
       width: 30px;
       margin-top: 6px;

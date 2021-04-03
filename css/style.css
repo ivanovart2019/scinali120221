@@ -230,7 +230,7 @@
   outline: none;
 }
 
-.menu-button span {
+.menu-button__line {
   /* настройка кнопки (полоски) */
   display: block;
   -webkit-transition: all 0.3s;
@@ -1348,11 +1348,11 @@ input[type="checkbox"]:checked + label:before {
   display: block;
 }
 
-.select__dropdown__option {
+.select__option {
   padding: 20px;
 }
 
-.select__dropdown__option:hover {
+.select__option:hover {
   background-color: #eee;
 }
 
