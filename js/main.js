@@ -11,7 +11,7 @@ $('.select__option').on('click', function () {
 });
 $("a[href^='#']").click(function () {
  var _href = $(this).attr("href");
- $("html,body").animate({ scrollTop: $(_href).offset().top - 120 + "px" });
+ $("html,body").animate({ scrollTop: $(_href).offset().top - 20 + "px" });
 });
 
 //------------ form select phone -------------------
